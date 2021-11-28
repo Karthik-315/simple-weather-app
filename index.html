@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="styles/style.css" />
+		<link rel="stylesheet" href="styles/owfont-regular.css" />
+		<title>A Simple Weather App</title>
+		<script defer src="scripts/app.js" type="module"></script>
+	</head>
+
+	<body class="body">
+		<header class="header">
+			<div class="header__title-container">
+				<div>
+					<h1 class="header__title">A Simple Weather App</h1>
+					<p class="header__test-data-indicator"></p>
+				</div>
+				<h2 class="header__clock">00:00</h2>
+			</div>
+			<nav class="nav">
+				<div class="nav__menu">
+					<a href="#" class="link nav__link--menu">
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							class="h-5 w-5 nav__icon"
+							fill="none"
+							viewBox="0 0 24 24"
+							stroke="currentColor"
+						>
+							<path
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								stroke-width="2"
+								d="M4 6h16M4 12h16m-7 6h7"
+							/>
+						</svg>
+					</a>
+				</div>
+				<ul class="nav__links">
+					<li class="nav__list-item">
+						<label class="nav__link--auto-refresh">
+							<span class="nav__link--text">Auto Refresh?</span>
+							<input class="nav__link--checkbox" type="checkbox" checked />
+							<span class="nav__link--slider"></span>
+						</label>
+					</li>
+
+					<li class="nav__list-item">
+						<a href="#" class="link nav__link--theme">
+							<!-- prettier-ignore -->
+							<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 nav__icon nav__theme nav__theme--light-mode" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+						  		</svg>
+
+							<!-- prettier-ignore -->
+							<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 nav__icon nav__theme nav__theme--dark-mode hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+							</svg>
+						</a>
+					</li>
+
+					<li class="nav__list-item">
+						<a href="" class="link nav__link--about">
+							<!-- prettier-ignore -->
+							<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 nav__icon 	nav__theme--info" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+							</svg>
+						</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+
+		<main class="main">
+			<section class="section section--main-data">
+				<article class="article article__data--location">
+					<h2 class="article__city">
+						<span class="city__first-letter">C</span>ity,
+						<span class="article__country">CN</span>
+					</h2>
+					<div class="article__date">
+						<h3 class="article__date-text">Date here</h3>
+					</div>
+				</article>
+
+				<article class="article article__data--condition">
+					<div class="article__condition--temperature">
+						<i class="article__temperature__icon owf owf-10x"></i>
+						<h2 class="article__temperature__degrees">
+							00&deg<span class="article__temperature__unit">
+								<button class="button temperature-unit active-unit">
+									C
+								</button>
+								<button class="button temperature-unit">F</button>
+							</span>
+						</h2>
+					</div>
+
+					<div class="article__condition--weather">
+						<h3 class="article__status__main">
+							<span class="article__status__main--first-letter">F</span
+							>irestorm
+						</h3>
+						<h6 class="article__status__desc">
+							Its burning outside. Go out if you want to die.
+						</h6>
+					</div>
+				</article>
+			</section>
+
+			<section class="section section--side-data">
+				<!-- prettier-ignore -->
+				<article class="article article__additional-data">
+					<div class="article__additional-data__container">
+						<i class="article__additional-data--icon icon--min-temp"></i>
+						<p class="article__additional-data--text text--min-temp"><span>25&degC</span></p>
+					</div>
+
+					<div class="article__additional-data__container">
+						<i class="article__additional-data--icon icon--max-temp"></i>
+						<p class="article__additional-data--text text--max-temp"><span>35&degC</span></p>
+					</div>
+
+					<div class="article__additional-data__container">
+						<i class="article__additional-data--icon icon--humidity"></i>
+						<p class="article__additional-data--text text--humidity"><span>50%</span></p>
+					</div>
+
+					<div class="article__additional-data__container">
+						<i class="article__additional-data--icon icon--pressure"></i>
+						<p class="article__additional-data--text text--pressure"><span>9999 mb</span></p>
+					</div>
+
+					<div class="article__additional-data__container">
+						<i class="article__additional-data--icon icon--sunrise"></i>
+						<p class="article__additional-data--text text--sunrise"><span>06:00</span></p>
+					</div>
+
+					<div class="article__additional-data__container">
+						<i class="article__additional-data--icon icon--sunset"></i>
+						<p class="article__additional-data--text text--sunset"><span>18:00</span></p>
+					</div>
+				</article>
+
+				<article class="article article__prediction">
+					<!-- Forecast data will be dynamically generated here -->
+
+					<!-- prettier-ignore -->
+					<div class="article__prediction-slider article__prediction-slider--left">
+						<button class="button article__slide-button article__slide-button--left">
+							<
+						</button>
+					</div>
+
+					<div class="article__prediction-container">
+						<!-- Sample Data -->
+						<!-- <div class="article__prediction-container">
+								<div class="article__prediction-days">
+									<p class="article__prediction-day">Mon</p>
+									<p class="article__prediction-time">10:00</p>
+									<i class="article__prediction-icon prediction-icon--day-3"></i>
+									<p class="article__prediction-temp">20&deg<span class="article__prediction-unit">C</span></p>
+								</div>
+							<div> -->
+					</div>
+
+					<!-- prettier-ignore -->
+					<div class="article__prediction-slider article__prediction-slider--right">
+						<button class="button article__slide-button article__slide-button--right">
+							>
+						</button>
+					</div>
+				</article>
+			</section>
+
+			<section class="section section--test-data-modal hidden">
+				<h2 class="modal__title">Pssst, you there. Listen...</h2>
+				<button class="button modal__close-button">&times;</button>
+				<p class="modal__content">
+					This application is currently running on test data. You can run it
+					like this to test UI changes or if you prefer, with actual data. It is
+					totally up to you, I am not gonna stop you.
+					<br /><br />
+					&emsp;To get actual data, make sure you have a valid API key from
+					<a
+						href="https://openweathermap.org/api"
+						target="_blank"
+						class="link openweathermap-link"
+					>
+						OpenWeatherMap
+					</a>
+					, set the API key in the variable <b>APIKey</b>, and set the flag
+					<b>RUN_ON_TEST_DATA</b> to false in the javascript code. Feel free to
+					use this project / code anywhere you like, and
+					<span class="credit-or-die">
+						credit me if possible.
+						<span class="credit-or-die-tooltip">
+							I'll kill you if you don't 😃
+						</span>
+					</span>
+				</p>
+			</section>
+		</main>
+
+		<div class="blur-overlay hidden"></div>
+
+		<footer class="footer">
+			<article class="article article__last-updated">
+				<p class="article__last-updated-text">
+					Last updated at: <span class="article__last-updated-time"></span>
+				</p>
+				<!-- prettier-ignore -->
+				<button class="button article__refresh-button">
+					<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 article__refresh-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+					</svg>
+				</button>
+			</article>
+			<article class="article article__quote">
+				<div class="quote__container">
+					<p class="article__quote-text">That's what.</p>
+					<p class="article__quote-author">
+						<span class="article__quote-author-text">-She</span>
+					</p>
+				</div>
+			</article>
+		</footer>
+	</body>
+</html>
