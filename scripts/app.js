@@ -390,7 +390,7 @@ const initializeApplication = function () {
 		mainData.style.opacity = 1;
 		otherData.style.opacity = 1;
 		// Display modal if running on test data.
-		RUN_ON_TEST_DATA && toggleModal();
+		// RUN_ON_TEST_DATA && toggleModal();
 		runProcesses();
 	}, 500);
 

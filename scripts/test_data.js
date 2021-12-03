@@ -11,9 +11,9 @@ const currentWeatherTestData = {
 	},
 	"weather": [
 		{
-			"id": 300,
-			"main": "Drizzle",
-			"description": "light intensity drizzle",
+			"id": 522,
+			"main": "Rain",
+			"description": "heavy intensity shower rain",
 			"icon": "10d",
 		},
 		{
