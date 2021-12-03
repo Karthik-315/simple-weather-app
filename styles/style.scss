@@ -106,7 +106,7 @@ body.dark-mode {
 	border-radius: 0.4rem;
 	transform: translate(200%, 0);
 	opacity: 0;
-	transition: all 0.3s;
+	transition: all 1s;
 }
 
 .nav__links.menu-enabled--small-screen {
@@ -117,7 +117,6 @@ body.dark-mode {
 .nav__list-item {
 	list-style: none;
 	margin: 0 3rem;
-	@include useFlex();
 }
 
 .nav__link--auto-refresh {
@@ -195,11 +194,8 @@ body.dark-mode {
 }
 
 .nav__icon {
-	font-size: 2.5rem;
-}
-
-.nav__icon.hidden {
-	display: none;
+	height: 2.5rem;
+	width: 2.5rem;
 }
 
 /* END of header styling */
@@ -640,13 +636,15 @@ body.dark-mode {
 .article__refresh-button {
 	height: 1.25rem;
 	width: 1.25rem;
-	font-size: 0.75rem;
+	font-size: 0.5rem;
 	padding: 0;
 	margin: 0 0.5rem;
 	transition: all 0.3s;
 }
 
 .article__refresh-icon {
+	height: inherit;
+	width: inherit;
 	color: #eee;
 }
 
