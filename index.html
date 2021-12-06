@@ -6,6 +6,10 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="styles/style.css" />
 		<link rel="stylesheet" href="styles/owfont-regular.css" />
+		<script
+			src="https://kit.fontawesome.com/b798e919c8.js"
+			crossorigin="anonymous"
+		></script>
 		<title>A Simple Weather App</title>
 		<script defer src="scripts/app.js" type="module"></script>
 	</head>
@@ -22,20 +26,7 @@
 			<nav class="nav">
 				<div class="nav__menu">
 					<a href="#" class="link nav__link--menu">
-						<svg
-							xmlns="http://www.w3.org/2000/svg"
-							class="h-5 w-5 nav__icon"
-							fill="none"
-							viewBox="0 0 24 24"
-							stroke="currentColor"
-						>
-							<path
-								stroke-linecap="round"
-								stroke-linejoin="round"
-								stroke-width="2"
-								d="M4 6h16M4 12h16m-7 6h7"
-							/>
-						</svg>
+						<i class="fa-solid fa-bars nav__icon"></i>
 					</a>
 				</div>
 				<ul class="nav__links">
@@ -50,23 +41,21 @@
 					<li class="nav__list-item">
 						<a href="#" class="link nav__link--theme">
 							<!-- prettier-ignore -->
-							<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 nav__icon nav__theme nav__theme--light-mode" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
-						  		</svg>
+							<i class="fa-regular fa-sun nav__icon nav__theme nav__theme--light-mode"></i>
 
 							<!-- prettier-ignore -->
-							<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 nav__icon nav__theme nav__theme--dark-mode hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
-							</svg>
+							<i class="fa-regular fa-moon nav__icon nav__theme nav__theme--dark-mode hidden"></i>
 						</a>
 					</li>
 
 					<li class="nav__list-item">
-						<a href="" class="link nav__link--about">
+						<a
+							href="html/about_credits.html"
+							target="_blank"
+							class="link nav__link--about"
+						>
 							<!-- prettier-ignore -->
-							<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 nav__icon 	nav__theme--info" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-							</svg>
+							<i class="fa-solid fa-info nav__icon nav__theme--info"></i>
 						</a>
 					</li>
 				</ul>
@@ -213,9 +202,7 @@
 				</p>
 				<!-- prettier-ignore -->
 				<button class="button article__refresh-button">
-					<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 article__refresh-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
-					</svg>
+					<i class="fa-solid fa-rotate-right article__refresh-icon"></i>
 				</button>
 			</article>
 			<article class="article article__quote">

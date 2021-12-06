@@ -63,6 +63,7 @@ let refreshInterval = 30; // In minutes
 let refreshWeather = "";
 let activeTemperatureUnit = localStorage.getItem("activeTemperatureUnit") || "C";
 let inactiveTemperatureUnit = localStorage.getItem("inActiveTemperatureUnit") || "F";
+let forecastDateFormat = localStorage.getItem("forecastDateFormat") || "ddmm";
 const quoteURL = `https://type.fit/api/quotes`;
 
 /* 
@@ -238,9 +239,15 @@ const displayCurrentWeather = function (weatherData) {
 
 	// Change temperature preference and save it to the browser.
 	temperatureUnitInactive.addEventListener("click", function () {
-		activeTemperatureUnit === "C"
-			? ((activeTemperatureUnit = "F"), (inactiveTemperatureUnit = "C"))
-			: ((activeTemperatureUnit = "C"), (inactiveTemperatureUnit = "F"));
+		if (activeTemperatureUnit === "C") {
+			activeTemperatureUnit = "F";
+			inactiveTemperatureUnit = "C";
+			forecastDateFormat = "mmdd";
+		} else {
+			activeTemperatureUnit = "C";
+			inactiveTemperatureUnit = "F";
+			forecastDateFormat = "ddmm";
+		}
 
 		temperatureUnitInactive.classList.add("temperature-unit--active");
 		temperatureUnitInactive.classList.remove("temperature-unit--inactive");
@@ -250,6 +257,7 @@ const displayCurrentWeather = function (weatherData) {
 
 		localStorage.setItem("activeTemperatureUnit", activeTemperatureUnit);
 		localStorage.setItem("inActiveTemperatureUnit", inactiveTemperatureUnit);
+		localStorage.setItem("forecastDateFormat", forecastDateFormat);
 
 		// Refresh UI with the changed temperature unit.
 		runProcesses();
@@ -327,7 +335,11 @@ const displayForecast = function (weatherForecastData) {
 
 	forecastList.forEach((currForecast, index) => {
 		const dateString = new Date(currForecast?.dt * 1000);
-		const shortDate = `${dateString.getDate()}/${dateString.getMonth() + 1}`;
+		// Change date format to MM/DD if temperature unit if Farenheit.
+		const shortDate =
+			forecastDateFormat === "ddmm"
+				? `${dateString.getDate()}/${dateString.getMonth() + 1}`
+				: `${dateString.getMonth() + 1}/${dateString.getDate()}`;
 
 		// Converting back to seconds as in fetchReadableTime, it is by default converted to milliseconds.
 		const time = fetchReadableTime(false, dateString / 1000);

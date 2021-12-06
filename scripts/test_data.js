@@ -11,9 +11,9 @@ const currentWeatherTestData = {
 	},
 	"weather": [
 		{
-			"id": 300,
-			"main": "Drizzle",
-			"description": "light intensity drizzle",
+			"id": 502,
+			"main": "Rain",
+			"description": "heavy intensity shower rain",
 			"icon": "10d",
 		},
 		{
@@ -47,13 +47,13 @@ const currentWeatherTestData = {
 	"sys": {
 		"type": 1,
 		"id": 9218,
-		"country": "IN",
+		"country": "CN",
 		"sunrise": 1636936677,
 		"sunset": 1636978190,
 	},
 	"timezone": 19800,
 	"id": 1465825,
-	"name": "Madipakkam",
+	"name": "City Name",
 	"cod": 200,
 };
 
