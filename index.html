@@ -1,107 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="styles/style.css" />
-		<link rel="stylesheet" href="styles/owfont-regular.css" />
-		<script
-			src="https://kit.fontawesome.com/b798e919c8.js"
-			crossorigin="anonymous"
-		></script>
-		<title>A Simple Weather App</title>
-		<script defer src="scripts/app.js" type="module"></script>
-	</head>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="styles/style.css" />
+        <link rel="stylesheet" href="styles/owfont-regular.css" />
+        <script
+            src="https://kit.fontawesome.com/b798e919c8.js"
+            crossorigin="anonymous"
+        ></script>
+        <title>A Simple Weather App</title>
+        <script defer src="scripts/app.js" type="module"></script>
+    </head>
 
-	<body class="body">
-		<header class="header">
-			<div class="header__title-container">
-				<div>
-					<h1 class="header__title">A Simple Weather App</h1>
-					<p class="header__test-data-indicator"></p>
-				</div>
-				<h2 class="header__clock">00:00</h2>
-			</div>
-			<nav class="nav">
-				<div class="nav__menu">
-					<a href="#" class="link nav__link--menu">
-						<i class="fa-solid fa-bars nav__icon"></i>
-					</a>
-				</div>
-				<ul class="nav__links">
-					<li class="nav__list-item">
-						<label class="nav__link--auto-refresh">
-							<span class="nav__link--text">Auto Refresh?</span>
-							<input class="nav__link--checkbox" type="checkbox" checked />
-							<span class="nav__link--slider"></span>
-						</label>
-					</li>
+    <body class="body">
+        <header class="header">
+            <div class="header__title-container">
+                <div>
+                    <h1 class="header__title">A Simple Weather App</h1>
+                    <p class="header__test-data-indicator"></p>
+                </div>
+                <h2 class="header__clock">00:00</h2>
+            </div>
+            <nav class="nav">
+                <div class="nav__menu">
+                    <a href="#" class="link nav__link--menu">
+                        <i class="fa-solid fa-bars nav__icon"></i>
+                    </a>
+                </div>
+                <ul class="nav__links">
+                    <li class="nav__list-item">
+                        <label class="nav__link--auto-refresh">
+                            <span class="nav__link--text">Auto Refresh?</span>
+                            <input class="nav__link--checkbox" type="checkbox" checked />
+                            <span class="nav__link--slider"></span>
+                        </label>
+                    </li>
 
-					<li class="nav__list-item">
-						<a href="#" class="link nav__link--theme">
-							<!-- prettier-ignore -->
-							<i class="fa-regular fa-sun nav__icon nav__theme nav__theme--light-mode"></i>
+                    <li class="nav__list-item">
+                        <a href="#" class="link nav__link--theme">
+                            <!-- prettier-ignore -->
+                            <i class="fa-regular fa-sun nav__icon nav__theme nav__theme--light-mode"></i>
 
-							<!-- prettier-ignore -->
-							<i class="fa-regular fa-moon nav__icon nav__theme nav__theme--dark-mode hidden"></i>
-						</a>
-					</li>
+                            <!-- prettier-ignore -->
+                            <i class="fa-regular fa-moon nav__icon nav__theme nav__theme--dark-mode hidden"></i>
+                        </a>
+                    </li>
 
-					<li class="nav__list-item">
-						<a
-							href="html/about_credits.html"
-							target="_blank"
-							class="link nav__link--about"
-						>
-							<!-- prettier-ignore -->
-							<i class="fa-solid fa-info nav__icon nav__theme--info"></i>
-						</a>
-					</li>
-				</ul>
-			</nav>
-		</header>
+                    <li class="nav__list-item">
+                        <a
+                            href="html/about_credits.html"
+                            target="_blank"
+                            class="link nav__link--about"
+                        >
+                            <!-- prettier-ignore -->
+                            <i class="fa-solid fa-info nav__icon nav__theme--info"></i>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
 
-		<main class="main">
-			<section class="section section--main-data">
-				<article class="article article__data--location">
-					<h2 class="article__city">
-						<span class="city__first-letter">C</span>ity,
-						<span class="article__country">CN</span>
-					</h2>
-					<div class="article__date">
-						<h3 class="article__date-text">Date here</h3>
-					</div>
-				</article>
+        <main class="main">
+            <section class="section section--main-data">
+                <article class="article article__data--location">
+                    <h2 class="article__city">
+                        <span class="city__first-letter">C</span>ity,
+                        <span class="article__country">CN</span>
+                    </h2>
+                    <div class="article__date">
+                        <h3 class="article__date-text">Date here</h3>
+                    </div>
+                </article>
 
-				<article class="article article__data--condition">
-					<div class="article__condition--temperature">
-						<i class="article__temperature__icon owf owf-10x"></i>
-						<h2 class="article__temperature__degrees">
-							00&deg<span class="article__temperature__unit">
-								<button class="button temperature-unit active-unit">
-									C
-								</button>
-								<button class="button temperature-unit">F</button>
-							</span>
-						</h2>
-					</div>
+                <article class="article article__data--condition">
+                    <div class="article__condition--temperature">
+                        <i class="article__temperature__icon owf owf-10x"></i>
+                        <h2 class="article__temperature__degrees">
+                            00&deg<span class="article__temperature__unit">
+                                <button class="button temperature-unit active-unit">C</button>
+                                <button class="button temperature-unit">F</button>
+                            </span>
+                        </h2>
+                    </div>
 
-					<div class="article__condition--weather">
-						<h3 class="article__status__main">
-							<span class="article__status__main--first-letter">F</span
-							>irestorm
-						</h3>
-						<h6 class="article__status__desc">
-							Its burning outside. Go out if you want to die.
-						</h6>
-					</div>
-				</article>
-			</section>
+                    <div class="article__condition--weather">
+                        <h3 class="article__status__main">
+                            <span class="article__status__main--first-letter">F</span>irestorm
+                        </h3>
+                        <h6 class="article__status__desc">
+                            Its burning outside. Go out if you want to die.
+                        </h6>
+                    </div>
+                </article>
+            </section>
 
-			<section class="section section--side-data">
-				<!-- prettier-ignore -->
-				<article class="article article__additional-data">
+            <section class="section section--side-data">
+                <!-- prettier-ignore -->
+                <article class="article article__additional-data">
 					<div class="article__additional-data__container">
 						<i class="article__additional-data--icon icon--min-temp"></i>
 						<p class="article__additional-data--text text--min-temp"><span>25&degC</span></p>
@@ -133,19 +130,19 @@
 					</div>
 				</article>
 
-				<article class="article article__prediction">
-					<!-- Forecast data will be dynamically generated here -->
+                <article class="article article__prediction">
+                    <!-- Forecast data will be dynamically generated here -->
 
-					<!-- prettier-ignore -->
-					<div class="article__prediction-slider article__prediction-slider--left">
+                    <!-- prettier-ignore -->
+                    <div class="article__prediction-slider article__prediction-slider--left">
 						<button class="button article__slide-button article__slide-button--left">
 							<
 						</button>
 					</div>
 
-					<div class="article__prediction-container">
-						<!-- Sample Data -->
-						<!-- <div class="article__prediction-container">
+                    <div class="article__prediction-container">
+                        <!-- Sample Data -->
+                        <!-- <div class="article__prediction-container">
 								<div class="article__prediction-days">
 									<p class="article__prediction-day">Mon</p>
 									<p class="article__prediction-time">10:00</p>
@@ -153,66 +150,89 @@
 									<p class="article__prediction-temp">20&deg<span class="article__prediction-unit">C</span></p>
 								</div>
 							<div> -->
-					</div>
+                    </div>
 
-					<!-- prettier-ignore -->
-					<div class="article__prediction-slider article__prediction-slider--right">
+                    <!-- prettier-ignore -->
+                    <div class="article__prediction-slider article__prediction-slider--right">
 						<button class="button article__slide-button article__slide-button--right">
 							>
 						</button>
 					</div>
-				</article>
-			</section>
+                </article>
+            </section>
 
-			<section class="section section--test-data-modal hidden">
-				<h2 class="modal__title">Pssst, you there. Listen...</h2>
-				<button class="button modal__close-button">&times;</button>
-				<p class="modal__content">
-					This application is currently running on test data. You can run it
-					like this to test UI changes or if you prefer, with actual data. It is
-					totally up to you, I am not gonna stop you.
-					<br /><br />
-					&emsp;To get actual data, make sure you have a valid API key from
-					<a
-						href="https://openweathermap.org/api"
-						target="_blank"
-						class="link openweathermap-link"
-					>
-						OpenWeatherMap
-					</a>
-					, set the API key in the variable <b>APIKey</b>, and set the flag
-					<b>RUN_ON_TEST_DATA</b> to false in the javascript code. Feel free to
-					use this project / code anywhere you like, and
-					<span class="credit-or-die">
-						credit me if possible.
-						<span class="credit-or-die-tooltip">
-							I'll kill you if you don't 😃
-						</span>
-					</span>
-				</p>
-			</section>
-		</main>
+            <section class="section section--test-data-modal hidden">
+                <h2 class="modal__title">Pssst, you there. Listen...</h2>
+                <button class="button modal__close-button">&times;</button>
+                <p class="modal__content">
+                    This application is currently running on test data. You can run it like
+                    this to test UI changes or if you prefer, with actual data. It is totally
+                    up to you, I am not gonna stop you.
+                    <br /><br />
+                    &emsp;To get actual data, make sure you have a valid API key from
+                    <a
+                        href="https://openweathermap.org/api"
+                        target="_blank"
+                        class="link openweathermap-link"
+                    >
+                        OpenWeatherMap
+                    </a>
+                    , set the API key in the variable <b>APIKey</b>, and set the flag
+                    <b>RUN_ON_TEST_DATA</b> to false in the javascript code. Feel free to use
+                    this project / code anywhere you like, and
+                    <span class="credit-or-die">
+                        credit me if possible.
+                        <span class="credit-or-die-tooltip">
+                            I'll kill you if you don't 😃
+                        </span>
+                    </span>
+                </p>
+            </section>
 
-		<div class="blur-overlay hidden"></div>
+            <section class="section section--error-message">
+                <article class="article article__error">
+                    <h2 class="article__error-title">NAAANI! An error occurred!<h2>
+					<div class="article__error-message">
+						<div class="error-message--main">
+							<span>Status Code</span>
+							<span class="error--separator">:</span>
+							<span class="error--status-code">000</span>
+							<span>Error Message</span>
+							<span class="error--separator">:</span>
+							<span class="error--text">Wot?</span>
+							<span>Occurred While</span>
+							<span class="error--separator">:</span>
+							<span class="error--occurred-while">Trying to eat.</span>
+						</div>
 
-		<footer class="footer">
-			<article class="article article__last-updated">
-				<p class="article__last-updated-text">
-					Last updated at: <span class="article__last-updated-time"></span>
-				</p>
-				<!-- prettier-ignore -->
-				<button class="button article__refresh-button">
+						<p class="error-message--additional">
+							
+						</p>
+					</div>
+                </article>
+            </section>
+        </main>
+
+        <div class="blur-overlay hidden"></div>
+
+        <footer class="footer">
+            <article class="article article__last-updated">
+                <p class="article__last-updated-text">
+                    Last updated at: <span class="article__last-updated-time"></span>
+                </p>
+                <!-- prettier-ignore -->
+                <button class="button article__refresh-button">
 					<i class="fa-solid fa-rotate-right article__refresh-icon"></i>
 				</button>
-			</article>
-			<article class="article article__quote">
-				<div class="quote__container">
-					<p class="article__quote-text">That's what.</p>
-					<p class="article__quote-author">
-						<span class="article__quote-author-text">-She</span>
-					</p>
-				</div>
-			</article>
-		</footer>
-	</body>
+            </article>
+            <article class="article article__quote">
+                <div class="quote__container">
+                    <p class="article__quote-text">That's what.</p>
+                    <p class="article__quote-author">
+                        <span class="article__quote-author-text">-She</span>
+                    </p>
+                </div>
+            </article>
+        </footer>
+    </body>
 </html>
