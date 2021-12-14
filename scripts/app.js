@@ -54,7 +54,7 @@ const quoteAuthor = document.querySelector(".article__quote-author-text");
 let predictionDays = "";
 
 /* Other variables */
-const RUN_ON_TEST_DATA = true;
+const RUN_ON_TEST_DATA = false;
 let currentTheme;
 let navMenuStatus = "hidden";
 // prettier-ignore
@@ -128,7 +128,17 @@ const setTheme = function (switchToTheme) {
 const getCurrentLocation = function () {
     return new Promise((resolve, reject) =>
         navigator.geolocation.getCurrentPosition(resolve, reject)
-    );
+    ).catch((error) => {
+        const errorMsg = {
+            status: `NA`,
+            message: error.message,
+            occurredWhile: `Fetching user location`,
+            additional: `Ensure you've provided location permission.`,
+        };
+
+        displayError(errorMsg);
+        hasErrors = true;
+    });
 };
 
 // Displays error message when an exception is encountered.
@@ -159,7 +169,6 @@ const getWeatherData = async function () {
         const currLoc = await getCurrentLocation();
         const { latitude: lat, longitude: lon } = currLoc.coords;
         const weatherURL = `${weatherURLPrefix}lat=${lat}&lon=${lon}&appid=${APIKey}`;
-        // const weatherURL = `https://api.aaaaopenweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${APIKey}`;
         const weatherFcURL = `${weatherFcURLPrefix}lat=${lat}&lon=${lon}&appid=${APIKey}`;
 
         testDataIndicator.style.opacity = 0;
