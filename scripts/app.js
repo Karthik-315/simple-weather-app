@@ -54,7 +54,7 @@ const quoteAuthor = document.querySelector(".article__quote-author-text");
 let predictionDays = "";
 
 /* Other variables */
-const RUN_ON_TEST_DATA = false;
+const RUN_ON_TEST_DATA = true;
 let currentTheme;
 let navMenuStatus = "hidden";
 // prettier-ignore
